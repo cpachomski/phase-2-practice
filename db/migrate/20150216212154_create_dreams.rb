@@ -4,7 +4,6 @@ class CreateDreams < ActiveRecord::Migration
       t.text :title
       t.text :content
       t.integer :user_id
-
       t.timestamps
     end
   end
