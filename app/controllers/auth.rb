@@ -25,9 +25,11 @@ post '/signup' do
   new_user = User.create(name: params[:name], email: params[:email], password: params[:password])
 
   if new_user
-   session[:user] =
+    session[:user] = new_user
+    redirect "/users/#{session[:user].id}"
   else
-  redirect '/login'
+    redirect '/login'
+  end
 
 end
 
